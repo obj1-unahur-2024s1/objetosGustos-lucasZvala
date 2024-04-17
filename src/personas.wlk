@@ -1,37 +1,81 @@
+import objetos.*
+
+
 object luisa{
-	
+	var gusta = false
 	method gustos(objeto){
-		return objeto.peso() <= 2000
+		if (objeto.peso() <= 2000){
+			gusta = true
 		}
 	}
+	
+	method gustos(){
+		return gusta
+	}
+		
+	method persona(){
+		return self.gustos()
+	}
+}
 
 object estefania{
+	var gusta = false
+	
 	
 	method gustos(objeto){
-		return objeto.esFuerte() 
-		}
+		if (objeto.esFuerte()){
+			gusta = true
+		} 
+		}	
+	
+	method gustos(){
+		return gusta
 	}
+		
+	method persona(){
+		return self.gustos()
+	}
+}
 
 object rosa{
+	var gusta = false
+	
  	method gustos(objeto){
-		return objeto.esBrillante() 
+		if (objeto.esBrillante()){
+			gusta = true
+		} 
+		
 		}	
+	method gustos(){
+		return gusta
+	}
+		
+	method persona(){
+		return self.gustos()
+	}
 }
 
 
 
 object juan{
+	var gusta = false
 	
 	method gustos(objeto){
-		var gusto = false
 		if(not objeto.esFuerte()){
-			gusto = true
+			gusta = true
 		}
 		if(objeto.peso()>= 1200){
-			gusto = true
+			gusta = true
 		}	if(objeto.peso()<= 1800){
-			gusto = true
+			gusta = true
 		}
-		return gusto
+	}
+	
+	method gustos(){
+		return gusta
+	}
+		
+	method persona(){
+		return self.gustos()
 	}
 }
